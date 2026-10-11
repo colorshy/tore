@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#17191B">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Tore Group — Премиальный юридический консалтинг и правовая защита в Казахстане. Корпоративное право, судебные споры, M&amp;A, арбитраж МФЦА и защита частных активов. Офисы в Астане и Алматы.">
+  <title>Tore Group — Премиальный юридический консалтинг | Казахстан</title>
+  
+  <!-- Favicon Monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22serif%22 fill=%22%23B99561%22>T</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury Display) + Playfair Display + Inter (Precision Sans) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER / FIXED FROSTED NAVIGATION -->
+  <header class="site-header" id="header" role="banner">
+    <div class="header-inner container">
+      <!-- Logo Monogram & Wordmark -->
+      <a href="#hero" class="brand-logo" aria-label="Tore Group Главная">
+        <img src="assets/tore-logo.png" alt="TORE Monogram" class="brand-monogram-img" width="34" height="34">
+        <div class="brand-titles">
+          <span class="brand-name">TORE GROUP</span>
+          <span class="brand-tagline">LEGAL &amp; CONSULTING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" role="navigation" aria-label="Основное меню">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">Компания</a></li>
+          <li><a href="#practices" class="nav-link">Услуги</a></li>
+          <li><a href="#cases" class="nav-link">Кейсы</a></li>
+          <li><a href="#team" class="nav-link">Команда</a></li>
+          <li><a href="#materials" class="nav-link">Материалы</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <button type="button" class="btn-discuss-header js-open-consultation" aria-label="Открыть окно обсуждения задачи">
+          <span class="btn-text">Обсудить задачу</span>
+          <span class="arrow-glyph" aria-hidden="true">→</span>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Переключить мобильное меню" aria-expanded="false" aria-controls="mobileNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-drawer" id="mobileNav" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <img src="assets/tore-logo.png" alt="TORE Monogram" class="brand-monogram-img" width="34" height="34">
+          <div class="brand-titles">
+            <span class="brand-name">TORE GROUP</span>
+            <span class="brand-tagline">LEGAL &amp; CONSULTING</span>
+          </div>
+        </div>
+        <button type="button" class="close-drawer-btn" id="closeMenuBtn" aria-label="Закрыть меню">✕</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#about" class="mobile-nav-link"><span class="nav-num">01</span> Компания</a>
+        <a href="#practices" class="mobile-nav-link"><span class="nav-num">02</span> Услуги</a>
+        <a href="#cases" class="mobile-nav-link"><span class="nav-num">03</span> Кейсы</a>
+        <a href="#team" class="mobile-nav-link"><span class="nav-num">04</span> Команда</a>
+        <a href="#materials" class="mobile-nav-link"><span class="nav-num">05</span> Материалы</a>
+        <a href="#contacts" class="mobile-nav-link"><span class="nav-num">06</span> Контакты</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <button type="button" class="btn-primary-sand w-full js-open-consultation">
+          Обсудить задачу
+          <span class="arrow-glyph" aria-hidden="true">→</span>
+        </button>
+        <div class="mobile-contacts-info">
+          <p class="mono-label">АСТАНА • АЛМАТЫ</p>
+          <a href="tel:+77172998800" class="mobile-phone-link">+7 (7172) 99-88-00</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1: HERO VIEWPORT (CINEMATIC ARCHITECTURAL BOARDROOM) -->
+    <section class="section-hero" id="hero" aria-label="Главный экран">
+      <!-- Dark Navy Architectural Boardroom Background -->
+      <div class="hero-bg-layer" aria-hidden="true">
+        <img 
+          src="assets/hero-boardroom.jpg" 
+          alt="Зал заседаний Tore Group — архитектурный интерьер с панорамным видом на вечерний мегаполис" 
+          class="hero-bg-image"
+          fetchpriority="high"
+        >
+        <div class="hero-navy-overlay"></div>
+      </div>
+
+      <div class="hero-centered-content container reveal-on-scroll">
+        <!-- Centered Brand Wordmark (Reference Inspired) -->
+        <div class="hero-wordmark-tore" aria-label="TORE">TORE</div>
+
+        <!-- Monumental Russian Editorial Headline -->
+        <h1 class="hero-headline">
+          Правовая ясность для сложных решений
+        </h1>
+
+        <!-- Primary Refined Gold Outlined CTA Button -->
+        <div class="hero-cta-wrap">
+          <button type="button" class="btn-hero-outlined js-open-consultation" id="heroPrimaryCta" aria-label="Обсудить задачу">
+            <span>Обсудить задачу</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom Center Scroll Indicator -->
+      <a href="#about" class="hero-scroll-indicator" aria-label="Прокрутить к описанию компании">
+        <span class="scroll-text">SCROLL</span>
+        <span class="scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- SECTION 2: О КОМПАНИИ & ПРИНЦИПЫ РАБОТЫ -->
+    <section class="section-about" id="about" aria-label="О компании">
+      <div class="container">
+        <!-- Top Eyebrow -->
+        <div class="section-top-badge reveal-on-scroll">
+          <span class="gold-dash" aria-hidden="true">—</span>
+          <span class="badge-label-mono">О КОМПАНИИ</span>
+        </div>
+
+        <!-- 2-Column Editorial Manifesto Layout -->
+        <div class="about-grid">
+          <!-- Left Column: Monumental H2 Manifesto -->
+          <div class="about-manifesto-col reveal-on-scroll">
+            <h2 class="manifesto-headline">
+              Мы не обещаем исход — <br class="manifesto-br"><span class="title-italic-accent">мы выстраиваем сильную правовую позицию.</span>
+            </h2>
+          </div>
+
+          <!-- Right Column: Editorial Paragraphs & Modal Trigger -->
+          <div class="about-text-col reveal-on-scroll">
+            <p class="editorial-paragraph">
+              Юридическая практика Tore Group основана на принципе бескомпромиссной правовой аналитики. В комплексных судебных разбирательствах, защите активов и сделках слияний и поглощений в юрисдикции Республики Казахстан мы устраняем субъективные оценки и выстраиваем доказательную базу на фундаменте судебной практики, прецедентов и предиктивного моделирования рисков.
+            </p>
+            <p class="editorial-paragraph secondary">
+              Мы не навязываем ненужных судебных процессов, если задача эффективнее решается структурированием переговорной позиции или досудебным урегулированием. Доверитель получает прозрачную картину вероятностей и персональную ответственность партнера.
+            </p>
+            
+            <div class="about-action-wrap">
+              <button type="button" class="editorial-text-link js-open-manifesto-modal">
+                <span>Подробнее о компании</span>
+                <span class="arrow-glyph" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Column Principle Cards -->
+        <div class="principles-grid" id="principles">
+          <article class="principle-card reveal-on-scroll">
+            <div class="principle-card-header">
+              <span class="principle-num">01</span>
+              <span class="principle-category">АНАЛИТИКА</span>
+            </div>
+            <h3 class="principle-title">Сначала — понимание задачи</h3>
+            <p class="principle-desc">
+              Глубокий аудит вводных данных и обстоятельств спора до подачи первого процессуального документа. Никаких шаблонных исков.
+            </p>
+          </article>
+
+          <article class="principle-card reveal-on-scroll">
+            <div class="principle-card-header">
+              <span class="principle-num">02</span>
+              <span class="principle-category">СТРАТЕГИЯ</span>
+            </div>
+            <h3 class="principle-title">Право как инструмент решения</h3>
+            <p class="principle-desc">
+              Связываем нормативные нормы с конкретными экономическими целями доверителя, открывая нестандартные и защищенные траектории.
+            </p>
+          </article>
+
+          <article class="principle-card reveal-on-scroll">
+            <div class="principle-card-header">
+              <span class="principle-num">03</span>
+              <span class="principle-category">ЭТИКА</span>
+            </div>
+            <h3 class="principle-title">Прямая коммуникация</h3>
+            <p class="principle-desc">
+              Честный расчет правовых рисков без завышенных ожиданий. Партнерский статус клиента и регулярные аналитические отчеты.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ПРАКТИКИ / УСЛУГИ -->
+    <section class="section-practices" id="practices" aria-label="Практики и услуги">
+      <div class="container">
+        <!-- Header -->
+        <div class="practices-header reveal-on-scroll">
+          <div class="header-eyebrow">
+            <span class="eyebrow-accent">—</span>
+            <span class="eyebrow-text">ПРАКТИКИ И НАПРАВЛЕНИЯ</span>
+          </div>
+          <div class="practices-header-grid">
+            <h2 class="practices-title">
+              Юридические решения <span class="title-italic-accent">под вашу ситуацию</span>
+            </h2>
+            <p class="practices-subtext">
+              Подключаем профильного специалиста и формируем междисциплинарную команду под точный масштаб и сложность вашей задачи в Республике Казахстан.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Category Filter Chips (Design Library Pattern) -->
+        <div class="practices-filter-bar reveal-on-scroll" role="tablist" aria-label="Фильтрация практик">
+          <button type="button" class="practice-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+            <span>Все практики (6)</span>
+          </button>
+          <button type="button" class="practice-filter-btn" data-filter="corporate" role="tab" aria-selected="false">
+            <span>Корпоративный сектор &amp; M&amp;A</span>
+          </button>
+          <button type="button" class="practice-filter-btn" data-filter="litigation" role="tab" aria-selected="false">
+            <span>Судебная &amp; уголовная защита</span>
+          </button>
+          <button type="button" class="practice-filter-btn" data-filter="private" role="tab" aria-selected="false">
+            <span>Частный капитал &amp; Family Office</span>
+          </button>
+        </div>
+
+        <!-- 2x3 Interactive Practice Grid -->
+        <div class="practices-grid" id="practicesGrid">
+          <!-- Card 01 -->
+          <article class="practice-card reveal-on-scroll" data-practice="01" data-category="litigation" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="practice-card-top">
+              <span class="practice-index">01</span>
+              <span class="practice-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="practice-card-bottom">
+              <h3 class="practice-name">Судебные споры</h3>
+              <p class="practice-desc">
+                Комплексное представительство в арбитражах и судах всех инстанций РК. Взыскание сложных долгов, защита корпоративных активов, корпоративные конфликты.
+              </p>
+              <div class="practice-meta">
+                <span class="meta-tag">Арбитраж</span>
+                <span class="meta-tag">Экономические споры</span>
+                <span class="meta-tag">Апелляция и кассация</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="practice-card reveal-on-scroll" data-practice="02" data-category="corporate" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="practice-card-top">
+              <span class="practice-index">02</span>
+              <span class="practice-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="practice-card-bottom">
+              <h3 class="practice-name">Корпоративное право</h3>
+              <p class="practice-desc">
+                Структурирование сделок M&amp;A, защита мажоритарных и миноритарных акционеров, разработка уставов и акционерных соглашений по праву РК и МФЦА.
+              </p>
+              <div class="practice-meta">
+                <span class="meta-tag">M&amp;A сделки</span>
+                <span class="meta-tag">Право МФЦА</span>
+                <span class="meta-tag">Реорганизация</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="practice-card reveal-on-scroll" data-practice="03" data-category="corporate" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="practice-card-top">
+              <span class="practice-index">03</span>
+              <span class="practice-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="practice-card-bottom">
+              <h3 class="practice-name">Договорная работа</h3>
+              <p class="practice-desc">
+                Аудит и составление трансграничных контрактов, дистрибьюторских и строительных соглашений FIDIC, купирование валютных и регуляторных рисков.
+              </p>
+              <div class="practice-meta">
+                <span class="meta-tag">Контракты ВЭД</span>
+                <span class="meta-tag">Стандарты FIDIC</span>
+                <span class="meta-tag">Риск-аудит</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 04 -->
+          <article class="practice-card reveal-on-scroll" data-practice="04" data-category="corporate" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="practice-card-top">
+              <span class="practice-index">04</span>
+              <span class="practice-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="practice-card-bottom">
+              <h3 class="practice-name">Сопровождение бизнеса</h3>
+              <p class="practice-desc">
+                Абонентское правовое сопровождение операционной деятельности, антимонопольный комплаенс, защита при налоговых проверках и госзакупках.
+              </p>
+              <div class="practice-meta">
+                <span class="meta-tag">Налоговый аудит</span>
+                <span class="meta-tag">Госзакупки</span>
+                <span class="meta-tag">Outsource Legal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 05 -->
+          <article class="practice-card reveal-on-scroll" data-practice="05" data-category="litigation" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="practice-card-top">
+              <span class="practice-index">05</span>
+              <span class="practice-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="practice-card-bottom">
+              <h3 class="practice-name">Уголовная защита</h3>
+              <p class="practice-desc">
+                Адвокатская защита первых лиц и топ-менеджмента по экономическим, служебным и налоговым статьям УК РК. Конфиденциальный аудит уголовных рисков бизнеса.
+              </p>
+              <div class="practice-meta">
+                <span class="meta-tag">White-Collar Crime</span>
+                <span class="meta-tag">Адвокатская тайна</span>
+                <span class="meta-tag">Срочный выезд</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 06 -->
+          <article class="practice-card reveal-on-scroll" data-practice="06" data-category="private" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="practice-card-top">
+              <span class="practice-index">06</span>
+              <span class="practice-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="practice-card-bottom">
+              <h3 class="practice-name">Частным клиентам</h3>
+              <p class="practice-desc">
+                Управление семейными состояниями, наследственное планирование в нескольких юрисдикциях, защита личных активов, семейные имущественные споры.
+              </p>
+              <div class="practice-meta">
+                <span class="meta-tag">Family Office</span>
+                <span class="meta-tag">Трасты и фонды</span>
+                <span class="meta-tag">Раздел активов</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: КЕЙСЫ И ПРАКТИКА (Dark Forest Editorial Section) -->
+    <section class="section-cases" id="cases" aria-label="Практика и кейсы">
+      <div class="container">
+        <!-- Header -->
+        <div class="cases-header reveal-on-scroll">
+          <div class="header-eyebrow">
+            <span class="eyebrow-accent">—</span>
+            <span class="eyebrow-text">ПРАКТИКА И КЕЙСЫ</span>
+          </div>
+          <div class="cases-header-grid">
+            <h2 class="cases-title">
+              Избранные проекты <span class="title-italic-accent">и сопровождение</span>
+            </h2>
+            <p class="cases-subtext">
+              Практический опыт комплексной защиты интересов доверителей, судебного представительства и структурирования сделок в юрисдикции Республики Казахстан и МФЦА.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3-Column Cases Grid -->
+        <div class="cases-grid">
+          <!-- Case 1 -->
+          <article class="case-card reveal-on-scroll">
+            <div class="case-card-header">
+              <span class="case-index">01</span>
+              <span class="case-category">M&amp;A // МФЦА</span>
+            </div>
+            <h3 class="case-title">Трансграничное M&amp;A промышленного холдинга</h3>
+            <p class="case-desc">
+              Комплексный Legal Due Diligence производственных активов в РК, разработка транзакционной документации по английскому общему праву в юрисдикции МФЦА и получение согласия АЗРК.
+            </p>
+            <div class="case-tags">
+              <span class="case-tag">M&amp;A сделка</span>
+              <span class="case-tag">Право МФЦА</span>
+              <span class="case-tag">Антимонопольный комплаенс</span>
+            </div>
+          </article>
+
+          <!-- Case 2 -->
+          <article class="case-card reveal-on-scroll">
+            <div class="case-card-header">
+              <span class="case-index">02</span>
+              <span class="case-category">АРБИТРАЖ // FIDIC</span>
+            </div>
+            <h3 class="case-title">Защита генерального подрядчика в споре на $14 млн</h3>
+            <p class="case-desc">
+              Представительство иностранного инфраструктурного подрядчика в международном коммерческом арбитраже по контракту FIDIC. Полное отклонение штрафных санкций заказчика.
+            </p>
+            <div class="case-tags">
+              <span class="case-tag">Арбитраж UNCITRAL</span>
+              <span class="case-tag">Контракт FIDIC</span>
+              <span class="case-tag">Защита активов</span>
+            </div>
+          </article>
+
+          <!-- Case 3 -->
+          <article class="case-card reveal-on-scroll">
+            <div class="case-card-header">
+              <span class="case-index">03</span>
+              <span class="case-category">НАЛОГОВЫЙ СПОР // РК</span>
+            </div>
+            <h3 class="case-title">Досудебная отмена налоговых доначислений</h3>
+            <p class="case-desc">
+              Анализ акта налоговой проверки недропользователя, подготовка позиции и апелляционное обжалование в Министерстве финансов РК с отменой необоснованных доначислений.
+            </p>
+            <div class="case-tags">
+              <span class="case-tag">Налоговый аудит</span>
+              <span class="case-tag">Недропользование</span>
+              <span class="case-tag">Досудебный спор</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Mandatory Confidentiality Notice -->
+        <p class="cases-confidentiality-notice reveal-on-scroll">
+          * В соответствии с Законом РК «Об адвокатской деятельности и юридической помощи» и профессиональной этикой наименования доверителей и конкретные финансовые реквизиты деперсонализированы.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: НАША КОМАНДА -->
+    <section class="section-team" id="team" aria-label="Наша команда">
+      <div class="container">
+        <!-- Header -->
+        <div class="team-header-grid reveal-on-scroll">
+          <div class="team-title-col">
+            <div class="section-top-badge">
+              <span class="gold-dash" aria-hidden="true">—</span>
+              <span class="badge-label-mono">НАША КОМАНДА</span>
+            </div>
+            <h2 class="team-headline">
+              За каждым делом — <span class="title-italic-accent">конкретный специалист</span>
+            </h2>
+          </div>
+
+          <div class="team-desc-col">
+            <p class="team-desc-text">
+              Адвокаты и юристы по уголовным, гражданским и семейным делам, корпоративным и налоговым спорам. Персональная ответственность партнера за каждую процессуальную стратегию.
+            </p>
+            <button type="button" class="team-full-roster-link js-open-team-modal" aria-label="Посмотреть всех 8 специалистов команды">
+              <span>Вся команда — 8 специалистов</span>
+              <span class="arrow-glyph" aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Portraits Grid (4 Cards in Viewport, 3:4 Aspect Ratio) -->
+        <div class="team-grid">
+          <!-- Specialist 1 -->
+          <article class="team-card reveal-on-scroll" data-member="1">
+            <div class="team-photo-wrap">
+              <img 
+                src="assets/partner-1.jpg" 
+                alt="Алихан Сарсенов — Управляющий партнер Tore Group" 
+                class="team-photo"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+              <div class="team-photo-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="team-card-caption">
+              <span class="specialist-role">УПРАВЛЯЮЩИЙ ПАРТНЕР</span>
+              <h3 class="specialist-name">Алихан Сарсенов</h3>
+              <p class="specialist-focus">Корпоративные споры, международный арбитраж. Стаж 18 лет.</p>
+            </div>
+          </article>
+
+          <!-- Specialist 2 -->
+          <article class="team-card reveal-on-scroll" data-member="2">
+            <div class="team-photo-wrap">
+              <img 
+                src="assets/partner-2.jpg" 
+                alt="Динара Кусаинова — Партнер, руководитель практики M&A" 
+                class="team-photo"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+              <div class="team-photo-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="team-card-caption">
+              <span class="specialist-role">ПАРТНЕР • РУКОВОДИТЕЛЬ ПРАКТИКИ</span>
+              <h3 class="specialist-name">Динара Кусаинова</h3>
+              <p class="specialist-focus">Сделки M&amp;A, инвестиционное право, право МФЦА. Стаж 14 лет.</p>
+            </div>
+          </article>
+
+          <!-- Specialist 3 -->
+          <article class="team-card reveal-on-scroll" data-member="3">
+            <div class="team-photo-wrap">
+              <img 
+                src="assets/partner-3.jpg" 
+                alt="Ерлан Бахытов — Старший адвокат практики уголовной защиты" 
+                class="team-photo"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+              <div class="team-photo-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="team-card-caption">
+              <span class="specialist-role">СТАРШИЙ АДВОКАТ</span>
+              <h3 class="specialist-name">Ерлан Бахытов</h3>
+              <p class="specialist-focus">Защита бизнеса по уголовным и экономическим делам. Стаж 21 год.</p>
+            </div>
+          </article>
+
+          <!-- Specialist 4 -->
+          <article class="team-card reveal-on-scroll" data-member="4">
+            <div class="team-photo-wrap">
+              <img 
+                src="assets/partner-4.jpg" 
+                alt="Тимур Жумагулов — Ведущий юрист налоговой практики" 
+                class="team-photo"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+              <div class="team-photo-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="team-card-caption">
+              <span class="specialist-role">ВЕДУЩИЙ ЮРИСТ</span>
+              <h3 class="specialist-name">Тимур Жумагулов</h3>
+              <p class="specialist-focus">Налоговые споры, контрактное право, аудит комплаенса. Стаж 10 лет.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: МАТЕРИАЛЫ И АНАЛИТИКА (Warm Ivory Editorial Reading) -->
+    <section class="section-materials" id="materials" aria-label="Материалы и аналитика">
+      <div class="container">
+        <!-- Header -->
+        <div class="materials-header reveal-on-scroll">
+          <div class="header-eyebrow">
+            <span class="eyebrow-accent">—</span>
+            <span class="eyebrow-text">МАТЕРИАЛЫ И АНАЛИТИКА</span>
+          </div>
+          <div class="materials-header-grid">
+            <h2 class="materials-title">
+              Правовая аналитика <span class="title-italic-accent">и экспертные обзоры</span>
+            </h2>
+            <p class="materials-subtext">
+              Аналитические публикации, обзоры правоприменительной практики судов Республики Казахстан и рекомендации юристов Tore Group для собственников бизнеса и корпоративных юристов.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3-Column Articles Grid -->
+        <div class="materials-grid">
+          <!-- Article 1 -->
+          <article class="material-card reveal-on-scroll">
+            <div class="material-meta-row">
+              <span class="material-badge">СУД МФЦА (AIFC)</span>
+              <span class="material-readtime">7 мин чтения • 2026</span>
+            </div>
+            <h3 class="material-title">
+              Разрешение коммерческих споров в Суде МФЦА: критерии выбора юрисдикции
+            </h3>
+            <p class="material-summary">
+              Практический анализ преимуществ английского общего права, процедура признания и принудительного исполнения приказов Суда МФЦА и решений IAC на территории РК.
+            </p>
+            <div class="material-action">
+              <button type="button" class="material-read-link js-open-consultation" aria-label="Запросить аналитический обзор по праву МФЦА">
+                <span>Запросить аналитическую справку</span>
+                <span class="arrow-glyph" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="material-card reveal-on-scroll">
+            <div class="material-meta-row">
+              <span class="material-badge">КОРПОРАТИВНОЕ ПРАВО</span>
+              <span class="material-readtime">5 мин чтения • 2026</span>
+            </div>
+            <h3 class="material-title">
+              Акционерные соглашения (SHA) и защита прав участников в праве Казахстана
+            </h3>
+            <p class="material-summary">
+              Сравнение механизмов защиты миноритариев по нормам ГК/Закона о ТОО РК и по праву МФЦА: опционы, deadlock-оговорки, условия tag-along и drag-along.
+            </p>
+            <div class="material-action">
+              <button type="button" class="material-read-link js-open-consultation" aria-label="Запросить материал по корпоративным соглашениям">
+                <span>Запросить аналитическую справку</span>
+                <span class="arrow-glyph" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="material-card reveal-on-scroll">
+            <div class="material-meta-row">
+              <span class="material-badge">ВЭД И РЕГУЛЯТОРЫ</span>
+              <span class="material-readtime">6 мин чтения • 2026</span>
+            </div>
+            <h3 class="material-title">
+              Валютный контроль и внешнеторговые контракты: актуальные риски импортеров
+            </h3>
+            <p class="material-summary">
+              Требования к оформлению экспортно-импортных соглашений, паспорта сделок в уполномоченных банках и минимизация рисков административной ответственности.
+            </p>
+            <div class="material-action">
+              <button type="button" class="material-read-link js-open-consultation" aria-label="Запросить обзор валютного контроля">
+                <span>Запросить аналитическую справку</span>
+                <span class="arrow-glyph" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: КОНТАКТЫ & ОБСУЖДЕНИЕ ЗАДАЧИ -->
+    <section class="section-contacts" id="contacts" aria-label="Контакты и консультация">
+      <div class="container">
+        <div class="contacts-split-grid">
+          <!-- Left Column: Direct Contacts & City Offices -->
+          <div class="contacts-info-col reveal-on-scroll">
+            <div class="header-eyebrow">
+              <span class="eyebrow-accent">—</span>
+              <span class="eyebrow-text">КОНТАКТЫ И ОФИСЫ</span>
+            </div>
+
+            <h2 class="contacts-headline">
+              Обсудить задачу <span class="title-italic-accent">в конфиденциальном формате</span>
+            </h2>
+
+            <p class="contacts-subtext">
+              Свяжитесь с нами напрямую или направьте предварительные тезисы ситуации. Управляющий партнер или профильный руководитель практики свяжется с вами в течение 2 рабочих часов.
+            </p>
+
+            <div class="offices-block">
+              <div class="office-entry">
+                <div class="office-city-header">
+                  <span class="city-indicator-dot" aria-hidden="true"></span>
+                  <span class="office-city-badge">АСТАНА</span>
+                </div>
+                <p class="office-address">ул. Достык 16, БЦ «Talan Towers», 18 этаж</p>
+                <a href="tel:+77172998800" class="office-phone">+7 (7172) 99-88-00</a>
+              </div>
+
+              <div class="office-entry">
+                <div class="office-city-header">
+                  <span class="city-indicator-dot" aria-hidden="true"></span>
+                  <span class="office-city-badge">АЛМАТЫ</span>
+                </div>
+                <p class="office-address">пр. Аль-Фараби 77/7, БЦ «Esentai Tower», 12 этаж</p>
+                <a href="tel:+77273554010" class="office-phone">+7 (727) 355-40-10</a>
+              </div>
+            </div>
+
+            <div class="contacts-meta-details">
+              <div class="meta-detail-row">
+                <span class="detail-label">Электронная почта:</span>
+                <a href="mailto:inquiry@toregroup.kz" class="detail-value-link">inquiry@toregroup.kz</a>
+              </div>
+              <div class="meta-detail-row">
+                <span class="detail-label">Режим приема:</span>
+                <span class="detail-value">Пн — Пт: 09:00 — 19:00 (конфиденциальный прием по записи)</span>
+              </div>
+            </div>
+
+            <div class="nda-legal-badge">
+              <div class="nda-icon" aria-hidden="true">🔒</div>
+              <p class="nda-text">
+                Строгое соблюдение адвокатской и профессиональной тайны в соответствии с Законом Республики Казахстан «Об адвокатской деятельности и юридической помощи».
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Refined Inquiry Form Card -->
+          <div class="contacts-form-col reveal-on-scroll">
+            <div class="form-card-wrapper">
+              <div class="form-card-header">
+                <span class="mono-step-tag gold">ЗАПРОС НА ПЕРВИЧНУЮ ОЦЕНКУ</span>
+                <h3 class="form-title">Заполните вводные данные</h3>
+                <p class="form-subtitle">Конфиденциально. Ответ руководителя практики за 2 часа.</p>
+              </div>
+
+              <form id="leadConsultationForm" class="inquiry-form" novalidate>
+                <!-- Name Field -->
+                <div class="form-group">
+                  <label for="clientName" class="form-label">Ваше имя или организация</label>
+                  <input 
+                    type="text" 
+                    id="clientName" 
+                    name="clientName" 
+                    class="form-input-field" 
+                    placeholder="Например, Марат Исаев или ТОО «Холдинг»" 
+                    required
+                    autocomplete="name"
+                  >
+                  <span class="field-error-msg" id="nameError" aria-live="polite"></span>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="form-group">
+                  <label for="clientPhone" class="form-label">Телефон для связи</label>
+                  <input 
+                    type="tel" 
+                    id="clientPhone" 
+                    name="clientPhone" 
+                    class="form-input-field" 
+                    placeholder="+7 (___) ___-__-__" 
+                    required
+                    autocomplete="tel"
+                  >
+                  <span class="field-error-msg" id="phoneError" aria-live="polite"></span>
+                </div>
+
+                <!-- Practice Selection Pills -->
+                <div class="form-group">
+                  <span class="form-label">Направление вопроса</span>
+                  <div class="practice-pills-row" role="radiogroup" aria-label="Выбор практики">
+                    <label class="pill-radio-label">
+                      <input type="radio" name="practiceType" value="Судебные споры" checked>
+                      <span class="pill-chip">Судебные споры</span>
+                    </label>
+                    <label class="pill-radio-label">
+                      <input type="radio" name="practiceType" value="Корпоративное право">
+                      <span class="pill-chip">Корпоративное право</span>
+                    </label>
+                    <label class="pill-radio-label">
+                      <input type="radio" name="practiceType" value="Сопровождение бизнеса">
+                      <span class="pill-chip">Бизнес-консалтинг</span>
+                    </label>
+                    <label class="pill-radio-label">
+                      <input type="radio" name="practiceType" value="Уголовная защита">
+                      <span class="pill-chip">Уголовная защита</span>
+                    </label>
+                    <label class="pill-radio-label">
+                      <input type="radio" name="practiceType" value="Частным клиентам">
+                      <span class="pill-chip">Частным клиентам</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                  <label for="clientMessage" class="form-label">Суть вопроса или предмет спора</label>
+                  <textarea 
+                    id="clientMessage" 
+                    name="clientMessage" 
+                    class="form-input-field form-textarea" 
+                    rows="3" 
+                    placeholder="Опишите стадию дела, юрисдикцию или ключевые финансовые параметры..."
+                    required
+                  ></textarea>
+                  <span class="field-error-msg" id="messageError" aria-live="polite"></span>
+                </div>
+
+                <!-- Form Action Button -->
+                <div class="form-submit-row">
+                  <button type="submit" class="btn-primary-sand w-full" id="submitInquiryBtn">
+                    <span>Отправить конфиденциальный запрос</span>
+                    <span class="arrow-glyph" aria-hidden="true">→</span>
+                  </button>
+                </div>
+
+                <!-- Strict NDA Reassurance Notice -->
+                <p class="form-nda-disclaimer">
+                  Отправляя запрос, вы защищены соглашением о неразглашении и адвокатской тайной. Первичный правовой анализ не налагает финансовых обязательств.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 6: FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Mark & Accreditation -->
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
+            <span class="monogram-emblem gold">T</span>
+            <div class="brand-titles">
+              <span class="brand-name white">TORE GROUP</span>
+              <span class="brand-tagline">LEGAL &amp; CONSULTING</span>
+            </div>
+          </div>
+          <p class="footer-mission">
+            Юридический консалтинг и стратегическая защита интересов бизнеса в юрисдикции Казахстана и международного арбитража.
+          </p>
+          <div class="footer-credentials">
+            <span class="credentials-badge">Палата юридических консультантов РК</span>
+            <span class="credentials-badge">Коллегия адвокатов г. Астана</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">НАВИГАЦИЯ</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Главный экран</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#practices">Услуги</a></li>
+            <li><a href="#cases">Кейсы и практика</a></li>
+            <li><a href="#team">Наша команда</a></li>
+            <li><a href="#materials">Материалы</a></li>
+            <li><a href="#contacts">Контакты и запись</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Practices -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">ПРАКТИКИ</h4>
+          <ul class="footer-links-list">
+            <li><a href="#practices" class="js-footer-practice" data-practice="01">Судебные и арбитражные споры</a></li>
+            <li><a href="#practices" class="js-footer-practice" data-practice="02">Корпоративное право и M&amp;A</a></li>
+            <li><a href="#practices" class="js-footer-practice" data-practice="03">Договорная работа и ВЭД</a></li>
+            <li><a href="#practices" class="js-footer-practice" data-practice="04">Комплексный бизнес-консалтинг</a></li>
+            <li><a href="#practices" class="js-footer-practice" data-practice="05">Уголовно-правовая защита</a></li>
+            <li><a href="#practices" class="js-footer-practice" data-practice="06">Частный капитал и Family Office</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal Disclaimer & Office Hubs -->
+        <div class="footer-col legal-col">
+          <h4 class="footer-col-title">ПРАВОВАЯ ИНФОРМАЦИЯ</h4>
+          <p class="footer-disclaimer-text">
+            Материалы сайта носят исключительно информационный характер и не являются публичной офертой либо индивидуальной юридической консультацией. Вся переписка защищена адвокатской тайной.
+          </p>
+          <div class="footer-city-meta">
+            <div><strong>Астана:</strong> БЦ «Talan Towers», 18 эт.</div>
+            <div><strong>Алматы:</strong> БЦ «Esentai Tower», 12 эт.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          © 2026 ТОО «Tore Group Legal &amp; Consulting». Все права защищены. Республика Казахстан.
+        </div>
+        <div class="footer-live-time" id="astanaTimeWidget">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>Астана (UTC+5): <strong id="liveTimeText">--:--:--</strong></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: CONSULTATION / RAPID ASSESSMENT MODAL -->
+  <div class="modal-backdrop" id="consultationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn js-close-modal" aria-label="Закрыть модальное окно">✕</button>
+      
+      <div class="modal-header">
+        <span class="mono-step-tag gold">КОНФИДЕНЦИАЛЬНО</span>
+        <h3 class="modal-title" id="modalTitle">Первичная правовая оценка</h3>
+        <p class="modal-subtitle">
+          Заполните ключевые параметры задачи. Партнер практики проведет экспресс-аудит рисков и свяжется с вами.
+        </p>
+      </div>
+
+      <form id="modalAssessmentForm" class="modal-form" novalidate>
+        <div class="form-group">
+          <label for="modalClientName" class="form-label">Имя или наименование организации</label>
+          <input type="text" id="modalClientName" name="modalClientName" class="form-input-field" placeholder="Ваше имя" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modalClientPhone" class="form-label">Телефон для конфиденциальной связи</label>
+          <input type="tel" id="modalClientPhone" name="modalClientPhone" class="form-input-field" placeholder="+7 (___) ___-__-__" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modalPracticeSelect" class="form-label">Направление</label>
+          <select id="modalPracticeSelect" name="modalPracticeSelect" class="form-select-custom">
+            <option value="Судебные споры">01 // Судебные и арбитражные споры</option>
+            <option value="Корпоративное право">02 // Корпоративное право и сделки M&amp;A</option>
+            <option value="Договорная работа">03 // Договорная работа и трансграничные контракты</option>
+            <option value="Сопровождение бизнеса">04 // Комплексное сопровождение бизнеса</option>
+            <option value="Уголовная защита">05 // Защита бизнеса и должностных лиц</option>
+            <option value="Частным клиентам">06 // Частный капитал и защита личных активов</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modalClientDetails" class="form-label">Суть ситуации</label>
+          <textarea id="modalClientDetails" name="modalClientDetails" class="form-input-field form-textarea" rows="2" placeholder="Кратко опишите ситуацию и желаемый результат..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary-sand w-full">
+          <span>Запросить оценку специалиста</span>
+          <span class="arrow-glyph" aria-hidden="true">→</span>
+        </button>
+
+        <p class="form-nda-disclaimer centered">
+          Гарантируем строгое неразглашение данных третьим лицам.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: PRACTICE DETAILS DRAWER -->
+  <div class="modal-backdrop" id="practiceDetailsModal" role="dialog" aria-modal="true" aria-labelledby="practiceModalTitle" aria-hidden="true">
+    <div class="modal-window practice-detail-window">
+      <button type="button" class="modal-close-btn js-close-modal" aria-label="Закрыть окно практики">✕</button>
+      
+      <div class="practice-modal-header">
+        <span class="practice-modal-index" id="practiceModalIndex">01</span>
+        <h3 class="practice-modal-title" id="practiceModalTitle">Название практики</h3>
+      </div>
+
+      <div class="practice-modal-body" id="practiceModalBody">
+        <!-- Injected via JavaScript based on selected practice -->
+      </div>
+
+      <div class="practice-modal-footer">
+        <button type="button" class="btn-primary-sand js-practice-to-consultation">
+          <span>Обсудить эту практику</span>
+          <span class="arrow-glyph" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: FULL TEAM ROSTER (ВСЯ КОМАНДА — 8) -->
+  <div class="modal-backdrop" id="teamRosterModal" role="dialog" aria-modal="true" aria-labelledby="teamModalTitle" aria-hidden="true">
+    <div class="modal-window team-roster-window">
+      <button type="button" class="modal-close-btn js-close-modal" aria-label="Закрыть окно команды">✕</button>
+      
+      <div class="modal-header">
+        <span class="mono-step-tag gold">КОМАНДА TORE GROUP</span>
+        <h3 class="modal-title" id="teamModalTitle">Все ключевые специалисты</h3>
+        <p class="modal-subtitle">
+          Команда юристов и адвокатов с глубокой отраслевой экспертизой в судах РК, МФЦА и международном арбитраже.
+        </p>
+      </div>
+
+      <div class="team-roster-grid" id="teamRosterGrid">
+        <!-- 8 Team Members List injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER (Emil Kowalski / Sonner Inspired) -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- SCRIPT -->
+  <script src="app.js"></script>
+</body>
+</html>
