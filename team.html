@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наша команда — Специалисты Tore Group | Юридический консалтинг</title>
+  <meta name="description" content="Команда опытных адвокатов и юристов Tore Group. Судебная защита, уголовное право, разрешение споров и корпоративный консалтинг в Казахстане.">
+
+  <!-- Favicon Monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22serif%22 fill=%22%23C9B086%22>T</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Наша команда — Tore Group">
+  <meta property="og:description" content="Познакомьтесь с опытом и направлениями работы специалистов Tore Group.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-team">
+  <!-- HEADER / FIXED FROSTED NAVIGATION -->
+  <header class="site-header" id="header" role="banner">
+    <div class="header-inner container">
+      <!-- Official Brand Logo -->
+      <a href="index.html" class="brand-logo-link" aria-label="Tore Group Главная">
+        <img src="assets/tore-header-logo.svg" alt="TÖRE // LEGAL &amp; CONSULTING GROUP" class="brand-header-logo-img" width="170" height="38">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" role="navigation" aria-label="Основное меню">
+        <ul class="nav-list">
+          <li><a href="company.html" class="nav-link">Компания</a></li>
+          <li><a href="index.html#practices" class="nav-link">Услуги</a></li>
+          <li><a href="index.html#cases" class="nav-link">Кейсы</a></li>
+          <li><a href="team.html" class="nav-link is-active" aria-current="page">Команда</a></li>
+          <li><a href="index.html#materials" class="nav-link">Материалы</a></li>
+          <li><a href="index.html#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <button type="button" class="btn-discuss-header js-open-consultation" aria-label="Открыть окно обсуждения задачи">
+          <span class="btn-text">Обсудить задачу</span>
+          <span class="arrow-glyph" aria-hidden="true">→</span>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Переключить мобильное меню" aria-expanded="false" aria-controls="mobileNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-drawer" id="mobileNav" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <div class="brand-logo-link">
+          <img src="assets/tore-header-logo.svg" alt="TÖRE // LEGAL &amp; CONSULTING GROUP" class="brand-header-logo-img" width="170" height="38">
+        </div>
+        <button type="button" class="close-drawer-btn" id="closeMenuBtn" aria-label="Закрыть меню">✕</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="company.html" class="mobile-nav-link"><span class="nav-num">01</span> Компания</a>
+        <a href="index.html#practices" class="mobile-nav-link"><span class="nav-num">02</span> Услуги</a>
+        <a href="index.html#cases" class="mobile-nav-link"><span class="nav-num">03</span> Кейсы</a>
+        <a href="team.html" class="mobile-nav-link is-active"><span class="nav-num">04</span> Команда</a>
+        <a href="index.html#materials" class="mobile-nav-link"><span class="nav-num">05</span> Материалы</a>
+        <a href="index.html#contacts" class="mobile-nav-link"><span class="nav-num">06</span> Контакты</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <button type="button" class="btn-primary-sand w-full js-open-consultation">
+          Обсудить задачу
+          <span class="arrow-glyph" aria-hidden="true">→</span>
+        </button>
+        <div class="mobile-contacts-info">
+          <p class="mono-label">АСТАНА • АЛМАТЫ</p>
+          <a href="tel:+77172998800" class="mobile-phone-link">+7 (7172) 99-88-00</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="team-page-main">
+    <section class="team-page-hero" aria-label="Наша команда">
+      <div class="container">
+        <!-- Eyebrow text -->
+        <div class="team-hero-eyebrow">
+          <span class="eyebrow-accent"><span class="bullet-square">■</span> НАША КОМАНДА</span>
+          <span class="eyebrow-ghost">НАША КОМАНДА</span>
+        </div>
+
+        <!-- 2-Column Desktop Composition: Heading on Left, Paragraph + Link on Right -->
+        <div class="team-hero-grid">
+          <div class="team-hero-title-col">
+            <h1 class="team-hero-title">За каждым делом —<br>конкретный специалист.</h1>
+          </div>
+          <div class="team-hero-text-col">
+            <p class="team-hero-desc">
+              Адвокаты и советники по комплексным экономическим, налоговым и арбитражным спорам. Персональная ответственность партнёра за каждую процессуальную стратегию.
+            </p>
+            <a href="#specialists-grid" class="team-hero-link">ВСЯ КОМАНДА — 8 СПЕЦИАЛИСТОВ →</a>
+          </div>
+        </div>
+
+        <!-- 4-Column Specialists Grid -->
+        <div class="specialists-cards-grid" id="specialists-grid">
+          
+          <!-- 1. ИЛЕСОВ НҰРҒИСА -->
+          <article class="specialist-card" data-member="ilesov">
+            <div class="specialist-photo-container">
+              <img 
+                src="assets/team/ilesov-1.jpg" 
+                alt="Илесов Нұрғиса — Партнёр Tore Group" 
+                class="specialist-main-photo"
+                width="456" 
+                height="568"
+                loading="eager"
+              >
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">ПАРТНЁР</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Илесов</span>
+                <span class="name-forename">Нұрғиса</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">Более 10 лет юридического стажа</span>
+              </div>
+              <p class="specialist-bio-text">
+                Главный партнер Tore Group с более чем 10-летним профессиональным юридическим стажем. Имеет опыт работы в следственных подразделениях.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-ilesov"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-ilesov" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Следственная практика и уголовная защита на всех стадиях досудебного расследования;</li>
+                    <li>Защита прав бизнеса по делам экономической и должностной направленности;</li>
+                    <li>Представление интересов доверителей в правоохранительных и надзорных органах Республики Казахстан.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Квалификация и опыт</h4>
+                  <p class="accordion-desc">Высшее юридическое образование. Многолетний практический опыт работы в следственных органах обеспечивает глубокое понимание процессуальных механизмов и эффективное выстраивание линии защиты.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. ПОГРЕБНЯК ИЛЬЯ НИКОЛАЕВИЧ (GALLERY 1/2) -->
+          <article class="specialist-card" data-member="pogrebnyak">
+            <div class="specialist-photo-container js-gallery" data-current="0">
+              <img 
+                src="assets/team/pogrebnyak-1.jpg" 
+                alt="Погребняк Илья Николаевич — Адвокат Tore Group" 
+                class="specialist-main-photo js-gallery-photo"
+                width="456" 
+                height="568"
+                loading="eager"
+              >
+              <!-- Gallery Navigation Pill -->
+              <div class="gallery-controls-pill">
+                <button type="button" class="gallery-arrow-btn js-gallery-prev" aria-label="Предыдущее фото">‹</button>
+                <span class="gallery-counter"><span class="js-current-slide">1</span> / <span class="js-total-slides">2</span></span>
+                <button type="button" class="gallery-arrow-btn js-gallery-next" aria-label="Следующее фото">›</button>
+              </div>
+            </div>
+            <!-- Thumbnails strip -->
+            <div class="gallery-thumbs-row">
+              <button type="button" class="gallery-thumb-btn is-active js-gallery-thumb" data-index="0" data-src="assets/team/pogrebnyak-1.jpg" aria-label="Фото 1">
+                <img src="assets/team/pogrebnyak-1.jpg" alt="Погребняк И.Н. фото 1">
+              </button>
+              <button type="button" class="gallery-thumb-btn js-gallery-thumb" data-index="1" data-src="assets/team/pogrebnyak-2.jpg" aria-label="Фото 2">
+                <img src="assets/team/pogrebnyak-2.jpg" alt="Погребняк И.Н. фото 2">
+              </button>
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">АДВОКАТ</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Погребняк</span>
+                <span class="name-forename">Илья Николаевич</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">Более 16 лет профессионального стажа</span>
+              </div>
+              <p class="specialist-bio-text">
+                Уголовное, корпоративное и налоговое право. Защита предпринимателей и сопровождение бизнеса.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-pogrebnyak"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-pogrebnyak" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Комплексная защита бизнеса при налоговых проверках и доначислениях;</li>
+                    <li>Уголовно-правовая защита предпринимателей и руководителей предприятий;</li>
+                    <li>Корпоративные конфликты, структурирование и сопровождение сделок с высокими рисками.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Статус и образование</h4>
+                  <p class="accordion-desc">Член Коллегии адвокатов. Высшее юридическое образование. Более 16 лет непрерывной судебной и консультационной практики в судах всех инстанций.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. МҰСТАФА МАҚСҰТ МАРАТҰЛЫ (GALLERY 1/3) -->
+          <article class="specialist-card" data-member="mustafa">
+            <div class="specialist-photo-container js-gallery" data-current="1">
+              <img 
+                src="assets/team/mustafa-2.jpg" 
+                alt="Мұстафа Мақсұт Маратұлы — Партнёр Tore Group" 
+                class="specialist-main-photo js-gallery-photo"
+                width="456" 
+                height="568"
+                loading="eager"
+              >
+              <!-- Gallery Navigation Pill -->
+              <div class="gallery-controls-pill">
+                <button type="button" class="gallery-arrow-btn js-gallery-prev" aria-label="Предыдущее фото">‹</button>
+                <span class="gallery-counter"><span class="js-current-slide">2</span> / <span class="js-total-slides">3</span></span>
+                <button type="button" class="gallery-arrow-btn js-gallery-next" aria-label="Следующее фото">›</button>
+              </div>
+            </div>
+            <!-- Thumbnails strip -->
+            <div class="gallery-thumbs-row">
+              <button type="button" class="gallery-thumb-btn js-gallery-thumb" data-index="0" data-src="assets/team/mustafa-1.jpg" aria-label="Фото 1">
+                <img src="assets/team/mustafa-1.jpg" alt="Мұстафа М.М. фото 1">
+              </button>
+              <button type="button" class="gallery-thumb-btn is-active js-gallery-thumb" data-index="1" data-src="assets/team/mustafa-2.jpg" aria-label="Фото 2">
+                <img src="assets/team/mustafa-2.jpg" alt="Мұстафа М.М. фото 2">
+              </button>
+              <button type="button" class="gallery-thumb-btn js-gallery-thumb" data-index="2" data-src="assets/team/mustafa-3.jpg" aria-label="Фото 3">
+                <img src="assets/team/mustafa-3.jpg" alt="Мұстафа М.М. фото 3">
+              </button>
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">ПАРТНЁР</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Мұстафа</span>
+                <span class="name-forename">Мақсұт Маратұлы</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">Более 10 лет юридического стажа</span>
+              </div>
+              <p class="specialist-bio-text">
+                Защита прав и интересов граждан и организаций. Уголовное, экономическое и земельное право.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-mustafa"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-mustafa" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Представительство в специализированных межрайонных экономических судах (СМЭС);</li>
+                    <li>Земельные споры, оформление прав землепользования и оспаривание изъятий участков;</li>
+                    <li>Уголовно-правовая защита прав и законных интересов граждан и юридических лиц.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Статус и образование</h4>
+                  <p class="accordion-desc">Высшее юридическое образование. Член Коллегии адвокатов. Успешный опыт судебного представительства по комплексным земельным и коммерческим искам.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. САПАРГАЛИЕВ АСКАР САПАРГАЛИЕВИЧ (GALLERY 1/2) -->
+          <article class="specialist-card" data-member="sapargaliyev">
+            <div class="specialist-photo-container js-gallery" data-current="0">
+              <img 
+                src="assets/team/sapargaliyev-1.jpg" 
+                alt="Сапаргалиев Аскар Сапаргалиевич — Адвокат Tore Group" 
+                class="specialist-main-photo js-gallery-photo"
+                width="456" 
+                height="568"
+                loading="lazy"
+              >
+              <!-- Gallery Navigation Pill -->
+              <div class="gallery-controls-pill">
+                <button type="button" class="gallery-arrow-btn js-gallery-prev" aria-label="Предыдущее фото">‹</button>
+                <span class="gallery-counter"><span class="js-current-slide">1</span> / <span class="js-total-slides">2</span></span>
+                <button type="button" class="gallery-arrow-btn js-gallery-next" aria-label="Следующее фото">›</button>
+              </div>
+            </div>
+            <!-- Thumbnails strip -->
+            <div class="gallery-thumbs-row">
+              <button type="button" class="gallery-thumb-btn is-active js-gallery-thumb" data-index="0" data-src="assets/team/sapargaliyev-1.jpg" aria-label="Фото 1">
+                <img src="assets/team/sapargaliyev-1.jpg" alt="Сапаргалиев А.С. фото 1">
+              </button>
+              <button type="button" class="gallery-thumb-btn js-gallery-thumb" data-index="1" data-src="assets/team/sapargaliyev-2.jpg" aria-label="Фото 2">
+                <img src="assets/team/sapargaliyev-2.jpg" alt="Сапаргалиев А.С. фото 2">
+              </button>
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">АДВОКАТ</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Сапаргалиев</span>
+                <span class="name-forename">Аскар Сапаргалиевич</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">Более 24 лет общего профессионального стажа</span>
+              </div>
+              <p class="specialist-bio-text">
+                Уголовные, гражданские и административные дела. Налоговые, корпоративные, хозяйственные споры.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-sapargaliyev"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-sapargaliyev" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Ведение наиболее сложных уголовных процессов и защита по делам особой важности;</li>
+                    <li>Корпоративные и хозяйственные споры между крупными участниками рынка;</li>
+                    <li>Судебные разбирательства с фискальными органами и защита имущественных активов.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Статус и профессиональный опыт</h4>
+                  <p class="accordion-desc">Действующий член Коллегии адвокатов. Стаж юридической практики превышает 24 года, включая руководство сложными комплексными судебными проектами в Верховном Суде РК.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. БАЙДУЛЛАЕВ ЖАМБЫЛ НУРДИЛЛАЕВИЧ -->
+          <article class="specialist-card" data-member="baidullayev">
+            <div class="specialist-photo-container">
+              <img 
+                src="assets/team/baidullayev-1.jpg" 
+                alt="Байдуллаев Жамбыл Нурдиллаевич — Юрист Tore Group" 
+                class="specialist-main-photo"
+                width="456" 
+                height="568"
+                loading="lazy"
+              >
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">ЮРИСТ</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Байдуллаев</span>
+                <span class="name-forename">Жамбыл Нурдиллаевич</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">Более 10 лет юридического стажа</span>
+              </div>
+              <p class="specialist-bio-text">
+                Уголовное, административное, экономическое и земельное право.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-baidullayev"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-baidullayev" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Экономические споры в сфере коммерческих договоров, поставок и подряда;</li>
+                    <li>Административное судопроизводство (АППК РК), обжалование актов и действий госорганов;</li>
+                    <li>Земельные отношения, защита титула собственности и прав природопользования.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Статус и квалификация</h4>
+                  <p class="accordion-desc">Высшее юридическое образование. Стаж профессиональной юридической практики свыше 10 лет. Представление интересов доверителей в судах всех уровней.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. КАЮМОВ АЛЕКСАНДР ВЯЧЕСЛАВОВИЧ (GALLERY 2/2) -->
+          <article class="specialist-card" data-member="kayumov">
+            <div class="specialist-photo-container js-gallery" data-current="1">
+              <img 
+                src="assets/team/kayumov-2.jpg" 
+                alt="Каюмов Александр Вячеславович — Адвокат, медиатор Tore Group" 
+                class="specialist-main-photo js-gallery-photo"
+                width="456" 
+                height="568"
+                loading="lazy"
+              >
+              <!-- Gallery Navigation Pill -->
+              <div class="gallery-controls-pill">
+                <button type="button" class="gallery-arrow-btn js-gallery-prev" aria-label="Предыдущее фото">‹</button>
+                <span class="gallery-counter"><span class="js-current-slide">2</span> / <span class="js-total-slides">2</span></span>
+                <button type="button" class="gallery-arrow-btn js-gallery-next" aria-label="Следующее фото">›</button>
+              </div>
+            </div>
+            <!-- Thumbnails strip -->
+            <div class="gallery-thumbs-row">
+              <button type="button" class="gallery-thumb-btn js-gallery-thumb" data-index="0" data-src="assets/team/kayumov-1.jpg" aria-label="Фото 1">
+                <img src="assets/team/kayumov-1.jpg" alt="Каюмов А.В. фото 1">
+              </button>
+              <button type="button" class="gallery-thumb-btn is-active js-gallery-thumb" data-index="1" data-src="assets/team/kayumov-2.jpg" aria-label="Фото 2">
+                <img src="assets/team/kayumov-2.jpg" alt="Каюмов А.В. фото 2">
+              </button>
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">АДВОКАТ • МЕДИАТОР</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Каюмов</span>
+                <span class="name-forename">Александр Вячеславович</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">В юриспруденции с 2018 года</span>
+              </div>
+              <p class="specialist-bio-text">
+                Основное направление — уголовные дела. Профессиональная медиация.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-kayumov"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-kayumov" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Защита по уголовным делам на стадиях следствия и судебного разбирательства;</li>
+                    <li>Проведение профессиональных процедур медиации и досудебного урегулирования конфликтов;</li>
+                    <li>Разработка мировых и медиативных соглашений с фиксацией в судебном порядке.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Статус и аккредитация</h4>
+                  <p class="accordion-desc">Член Коллегии адвокатов, сертифицированный профессиональный медиатор. Высшее юридическое образование.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. СМАТЛАЕВ ЕСЕНГЕЛДІ ӘКІМБЕКҰЛЫ -->
+          <article class="specialist-card" data-member="smatlayev">
+            <div class="specialist-photo-container">
+              <img 
+                src="assets/team/smatlayev-1.jpg" 
+                alt="Сматлаев Есенгелді Әкімбекұлы — Юридический консультант Tore Group" 
+                class="specialist-main-photo"
+                width="456" 
+                height="568"
+                loading="lazy"
+              >
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">ЮРИДИЧЕСКИЙ КОНСУЛЬТАНТ</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Сматлаев</span>
+                <span class="name-forename">Есенгелді Әкімбекұлы</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">Общий стаж — 4 года</span>
+              </div>
+              <p class="specialist-bio-text">
+                Уголовный процесс, гражданские и семейные споры, исполнительное производство.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-smatlayev"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-smatlayev" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Сопровождение гражданских и семейных споров, представление интересов в суде;</li>
+                    <li>Взыскание задолженностей и контроль исполнительного производства (ЧСИ);</li>
+                    <li>Правовая экспертиза договоров и подготовка процессуальных документов.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Статус</h4>
+                  <p class="accordion-desc">Член Палаты юридических консультантов Республики Казахстан. Высшее юридическое образование.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. ОРЫНБАЕВА РУХСАНА УЛУГБЕКОВНА (GALLERY 1/2) -->
+          <article class="specialist-card" data-member="orynbayeva">
+            <div class="specialist-photo-container js-gallery" data-current="0">
+              <img 
+                src="assets/team/orynbayeva-1.jpg" 
+                alt="Орынбаева Рухсана Улугбековна — Юрист по брачно-семейному праву Tore Group" 
+                class="specialist-main-photo js-gallery-photo"
+                width="456" 
+                height="568"
+                loading="lazy"
+              >
+              <!-- Gallery Navigation Pill -->
+              <div class="gallery-controls-pill">
+                <button type="button" class="gallery-arrow-btn js-gallery-prev" aria-label="Предыдущее фото">‹</button>
+                <span class="gallery-counter"><span class="js-current-slide">1</span> / <span class="js-total-slides">2</span></span>
+                <button type="button" class="gallery-arrow-btn js-gallery-next" aria-label="Следующее фото">›</button>
+              </div>
+            </div>
+            <!-- Thumbnails strip -->
+            <div class="gallery-thumbs-row">
+              <button type="button" class="gallery-thumb-btn is-active js-gallery-thumb" data-index="0" data-src="assets/team/orynbayeva-1.jpg" aria-label="Фото 1">
+                <img src="assets/team/orynbayeva-1.jpg" alt="Орынбаева Р.У. фото 1">
+              </button>
+              <button type="button" class="gallery-thumb-btn js-gallery-thumb" data-index="1" data-src="assets/team/orynbayeva-2.jpg" aria-label="Фото 2">
+                <img src="assets/team/orynbayeva-2.jpg" alt="Орынбаева Р.У. фото 2">
+              </button>
+            </div>
+            <div class="specialist-card-body">
+              <span class="specialist-role-tag">ЮРИСТ ПО БРАЧНО-СЕМЕЙНОМУ ПРАВУ</span>
+              <h3 class="specialist-name-block">
+                <span class="name-surname">Орынбаева</span>
+                <span class="name-forename">Рухсана Улугбековна</span>
+              </h3>
+              <div class="specialist-exp-row">
+                <span class="exp-text">Более 5 лет юридической практики</span>
+              </div>
+              <p class="specialist-bio-text">
+                Оказываю профессиональную юридическую помощь по вопросам семейных и брачных отношений.
+              </p>
+              <button 
+                type="button" 
+                class="specialist-accordion-btn js-toggle-accordion" 
+                aria-expanded="false" 
+                aria-controls="exp-orynbayeva"
+              >
+                <span class="accordion-title">Опыт и направления работы</span>
+                <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="specialist-accordion-content" id="exp-orynbayeva" hidden>
+                <div class="accordion-inner">
+                  <h4 class="accordion-subtitle">Направления практики</h4>
+                  <ul class="accordion-list">
+                    <li>Расторжение брака в судебном порядке и раздел совместно нажитого имущества супругов;</li>
+                    <li>Определение места жительства несовершеннолетних детей и порядка общения с ними;</li>
+                    <li>Взыскание алиментов, установление и оспаривание отцовства, брачные договоры.</li>
+                  </ul>
+                  <h4 class="accordion-subtitle">Квалификация</h4>
+                  <p class="accordion-desc">Высшее юридическое образование. Специализация на деликатном и конфиденциальном разрешении семейных и имущественных споров.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER / DARK EDITORIAL BASEMENT -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Philosophy -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="brand-logo-link" aria-label="Tore Group Главная">
+            <img src="assets/tore-header-logo.svg" alt="TÖRE // LEGAL &amp; CONSULTING GROUP" class="footer-brand-logo-img" width="170" height="38">
+          </a>
+          <p class="footer-desc">
+            Премиальный юридический консалтинг и процессуальная защита бизнеса в Казахстане. Индивидуальный выбор стратегии для доверителей с повышенными требованиями к точности и конфиденциальности.
+          </p>
+          <div class="footer-locations">
+            <span class="loc-tag">АСТАНА</span>
+            <span class="loc-sep">•</span>
+            <span class="loc-tag">АЛМАТЫ</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col footer-col-links">
+          <h3 class="footer-heading">Навигация</h3>
+          <ul class="footer-nav">
+            <li><a href="company.html">О компании</a></li>
+            <li><a href="index.html#practices">Юридические практики</a></li>
+            <li><a href="index.html#cases">Кейсы и опыт</a></li>
+            <li><a href="team.html" class="is-active">Наша команда</a></li>
+            <li><a href="index.html#materials">Материалы и аналитика</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Practices List -->
+        <div class="footer-col footer-col-practices">
+          <h3 class="footer-heading">Практики</h3>
+          <ul class="footer-nav">
+            <li><a href="index.html#practices">Уголовно-правовая защита</a></li>
+            <li><a href="index.html#practices">Налоговые споры</a></li>
+            <li><a href="index.html#practices">Корпоративное право и M&amp;A</a></li>
+            <li><a href="index.html#practices">Недвижимость и земля</a></li>
+            <li><a href="index.html#practices">Банкротство и реструктуризация</a></li>
+            <li><a href="index.html#practices">Медиация и семейные споры</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contacts & Direct Line -->
+        <div class="footer-col footer-col-contacts">
+          <h3 class="footer-heading">Прямой контакт</h3>
+          <div class="footer-contact-block">
+            <span class="mono-label">ТЕЛЕФОН КОНСАЛТИНГА</span>
+            <a href="tel:+77172998800" class="footer-contact-val phone">+7 (7172) 99-88-00</a>
+          </div>
+          <div class="footer-contact-block">
+            <span class="mono-label">ЭЛЕКТРОННАЯ ПОЧТА</span>
+            <a href="mailto:info@toregroup.kz" class="footer-contact-val">info@toregroup.kz</a>
+          </div>
+          <div class="footer-contact-block">
+            <button type="button" class="btn-primary-sand js-open-consultation">
+              Обсудить задачу
+              <span class="arrow-glyph" aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          © 2026 Tore Group Legal &amp; Consulting. Все права защищены.
+        </p>
+        <p class="disclaimer-text">
+          Информация, представленная на сайте, носит информационный характер и не является публичной офертой.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: CONSULTATION FORM ("ОБСУДИТЬ ЗАДАЧУ") -->
+  <div class="modal-backdrop" id="consultationModal" role="dialog" aria-modal="true" aria-labelledby="consultModalTitle" aria-hidden="true">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="mono-step-tag gold">КОНФИДЕНЦИАЛЬНО</span>
+          <h3 class="modal-title" id="consultModalTitle">Обсудить правовую задачу</h3>
+          <p class="modal-subtitle">Оставьте запрос для конфиденциальной консультации с партнером практики.</p>
+        </div>
+        <button type="button" class="modal-close-btn js-close-modal" aria-label="Закрыть модальное окно">✕</button>
+      </div>
+
+      <form class="modal-form" id="consultationForm" novalidate>
+        <div class="form-group">
+          <label for="clientName" class="form-label">Ваше имя *</label>
+          <input type="text" id="clientName" name="name" class="form-input" placeholder="Александр Ибрагимов" required autocomplete="name">
+          <span class="form-error" id="nameError">Пожалуйста, укажите имя</span>
+        </div>
+
+        <div class="form-group">
+          <label for="clientPhone" class="form-label">Телефон *</label>
+          <input type="tel" id="clientPhone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+          <span class="form-error" id="phoneError">Укажите корректный номер телефона</span>
+        </div>
+
+        <div class="form-group">
+          <label for="clientPractice" class="form-label">Интересующая практика</label>
+          <select id="clientPractice" name="practice" class="form-input form-select">
+            <option value="criminal">Уголовно-правовая защита</option>
+            <option value="tax">Налоговые споры и аудит</option>
+            <option value="corporate">Корпоративное право и M&amp;A</option>
+            <option value="land">Земельные и имущественные споры</option>
+            <option value="mediation">Медиация и семейное право</option>
+            <option value="other">Другой правовой вопрос</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="clientMessage" class="form-label">Краткое описание задачи</label>
+          <textarea id="clientMessage" name="message" class="form-input form-textarea" rows="3" placeholder="Опишите суть вопроса или процессуальные сроки..."></textarea>
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="btn-primary-sand w-full" id="submitConsultationBtn">
+            <span>Отправить запрос</span>
+            <span class="arrow-glyph" aria-hidden="true">→</span>
+          </button>
+          <p class="privacy-note">
+            Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных в режиме строгой адвокатской тайны.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite" aria-hidden="true">
+    <div class="toast-content">
+      <div class="toast-icon" aria-hidden="true">✓</div>
+      <div class="toast-text-wrap">
+        <p class="toast-title" id="toastTitle">Запрос принят</p>
+        <p class="toast-desc" id="toastDesc">Специалист Tore Group свяжется с вами в течение 30 минут.</p>
+      </div>
+      <button type="button" class="toast-close-btn" id="toastCloseBtn" aria-label="Закрыть уведомление">✕</button>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

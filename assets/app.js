@@ -198,34 +198,136 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateAstanaTime, 1000);
 
   // --- 5. TOAST NOTIFICATION UTILITY ---
+  // index.html: stacked toasts injected into #toastContainer.
+  // company.html / team.html: one static #toastNotification element toggled via .is-visible.
   const toastContainer = document.getElementById('toastContainer');
-  function showToast(title, message, duration = 4500) {
+  const staticToast = document.getElementById('toastNotification');
+  const staticToastTitle = document.getElementById('toastTitle');
+  const staticToastDesc = document.getElementById('toastDesc');
+  const staticToastIcon = staticToast ? staticToast.querySelector('.toast-icon') : null;
+  const staticToastClose = document.getElementById('toastCloseBtn');
+  let staticToastTimer = null;
+
+  function hideStaticToast() {
+    if (!staticToast) return;
+    clearTimeout(staticToastTimer);
+    staticToast.classList.remove('is-visible');
+    staticToast.setAttribute('aria-hidden', 'true');
+  }
+
+  if (staticToastClose) staticToastClose.addEventListener('click', hideStaticToast);
+
+  function showToast(title, message, { duration = 6000, type = 'success' } = {}) {
+    if (staticToast) {
+      clearTimeout(staticToastTimer);
+      if (staticToastTitle) staticToastTitle.textContent = title;
+      if (staticToastDesc) staticToastDesc.textContent = message;
+      if (staticToastIcon) staticToastIcon.textContent = type === 'error' ? '!' : '✓';
+      staticToast.classList.toggle('is-error', type === 'error');
+      staticToast.setAttribute('aria-hidden', 'false');
+      requestAnimationFrame(() => staticToast.classList.add('is-visible'));
+      staticToastTimer = setTimeout(hideStaticToast, duration);
+      return;
+    }
+
     if (!toastContainer) return;
     const toast = document.createElement('div');
     toast.className = 'toast-message';
-    toast.setAttribute('role', 'status');
-    toast.innerHTML = `
-      <div class="toast-icon" aria-hidden="true">✦</div>
-      <div class="toast-content">
-        <span class="toast-title">${title}</span>
-        <span class="toast-text">${message}</span>
-      </div>
-    `;
+    toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
+
+    const icon = document.createElement('div');
+    icon.className = 'toast-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = type === 'error' ? '!' : '✦';
+
+    const content = document.createElement('div');
+    content.className = 'toast-content';
+    const titleEl = document.createElement('span');
+    titleEl.className = 'toast-title';
+    titleEl.textContent = title;
+    const textEl = document.createElement('span');
+    textEl.className = 'toast-text';
+    textEl.textContent = message;
+    content.append(titleEl, textEl);
+    toast.append(icon, content);
 
     toastContainer.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('is-visible'));
 
-    // Trigger enter animation
-    requestAnimationFrame(() => {
-      toast.classList.add('is-visible');
-    });
-
-    // Auto remove
     setTimeout(() => {
       toast.classList.remove('is-visible');
-      toast.addEventListener('transitionend', () => {
-        toast.remove();
-      }, { once: true });
+      toast.addEventListener('transitionend', () => toast.remove(), { once: true });
     }, duration);
+  }
+
+  // --- 5b. LEAD DELIVERY (no simulated success) ---
+  // If a form (or <body>) has data-endpoint, the lead is POSTed there and success is reported
+  // only on a 2xx response. Without an endpoint, a pre-filled e-mail draft is opened instead.
+  const LEAD_EMAIL = 'info@toregroup.kz';
+  const LEAD_FIELD_LABELS = {
+    name: 'Имя', clientName: 'Имя', modalClientName: 'Имя',
+    phone: 'Телефон', clientPhone: 'Телефон', modalClientPhone: 'Телефон',
+    practice: 'Практика', modalPracticeSelect: 'Практика',
+    message: 'Описание', clientMessage: 'Описание', modalClientDetails: 'Описание'
+  };
+
+  async function deliverLead(form) {
+    const payload = {};
+    new FormData(form).forEach((value, key) => {
+      const v = String(value).trim();
+      if (v) payload[key] = v;
+    });
+    const endpoint = form.dataset.endpoint || document.body.dataset.leadEndpoint;
+
+    if (endpoint) {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error(`Lead endpoint responded ${res.status}`);
+      return 'sent';
+    }
+
+    const lines = Object.entries(payload).map(([k, v]) => `${LEAD_FIELD_LABELS[k] || k}: ${v}`);
+    const subject = encodeURIComponent('Запрос с сайта Tore Group');
+    const body = encodeURIComponent(lines.join('\n'));
+    window.location.href = `mailto:${LEAD_EMAIL}?subject=${subject}&body=${body}`;
+    return 'mailto';
+  }
+
+  async function handleLeadSubmit(form, submitBtn, { onSent } = {}) {
+    const originalHtml = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Отправка запроса...</span>';
+    }
+    try {
+      const result = await deliverLead(form);
+      if (result === 'sent') {
+        form.reset();
+        if (onSent) onSent();
+        showToast('Запрос принят', 'Специалист Tore Group свяжется с вами в ближайшее время.');
+      } else {
+        showToast(
+          'Письмо подготовлено',
+          `Открыт почтовый клиент с вашим запросом. Отправьте письмо на ${LEAD_EMAIL}, чтобы мы его получили.`,
+          { duration: 9000 }
+        );
+      }
+    } catch (err) {
+      console.warn('[Tore Group] lead delivery failed:', err);
+      showToast(
+        'Не удалось отправить запрос',
+        `Пожалуйста, позвоните +7 (7172) 99-88-00 или напишите на ${LEAD_EMAIL}.`,
+        { duration: 9000, type: 'error' }
+      );
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHtml;
+      }
+    }
   }
 
   // --- 6. MODALS MANAGEMENT ---
@@ -526,20 +628,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) return;
 
-      const submitBtn = document.getElementById('submitInquiryBtn');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Отправка данных...</span>';
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<span>Отправить конфиденциальный запрос</span><span class="arrow-glyph" aria-hidden="true">→</span>';
-        leadForm.reset();
-
-        showToast(
-          'Запрос зарегистрирован',
-          'Партнер практики свяжется с вами в течение 2 рабочих часов. Конфиденциальность гарантирована.'
-        );
-      }, 700);
+      handleLeadSubmit(leadForm, document.getElementById('submitInquiryBtn'));
     });
   }
 
@@ -563,21 +652,137 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const submitBtn = modalForm.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Регистрация...</span>';
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<span>Запросить оценку специалиста</span><span class="arrow-glyph" aria-hidden="true">→</span>';
-        closeModal(consultationModal);
-        modalForm.reset();
-
-        showToast(
-          'Заявка принята в работу',
-          'С вами свяжется управляющий партнер Tore Group.'
-        );
-      }, 600);
+      handleLeadSubmit(modalForm, modalForm.querySelector('button[type="submit"]'), {
+        onSent: () => closeModal(consultationModal)
+      });
     });
   }
+
+  // Consultation modal form on inner pages (company.html, team.html)
+  const consultationForm = document.getElementById('consultationForm');
+  if (consultationForm) {
+    const setFieldError = (input, hasError) => {
+      const group = input.closest('.form-group');
+      if (group) group.classList.toggle('has-error', hasError);
+      input.setAttribute('aria-invalid', String(hasError));
+    };
+
+    consultationForm.querySelectorAll('.form-input').forEach(input => {
+      input.addEventListener('input', () => setFieldError(input, false));
+    });
+
+    consultationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById('clientName');
+      const phoneInput = document.getElementById('clientPhone');
+
+      const nameInvalid = nameInput.value.trim().length < 2;
+      const phoneInvalid = phoneInput.value.replace(/\D/g, '').length < 11;
+      setFieldError(nameInput, nameInvalid);
+      setFieldError(phoneInput, phoneInvalid);
+
+      if (nameInvalid) { nameInput.focus(); return; }
+      if (phoneInvalid) { phoneInput.focus(); return; }
+
+      handleLeadSubmit(consultationForm, document.getElementById('submitConsultationBtn'), {
+        onSent: () => closeModal(consultationModal)
+      });
+    });
+  }
+
+  // --- 8. TEAM PAGE: INTERACTIVE GALLERIES & ACCORDIONS ---
+  const initTeamPage = () => {
+    // A. Accordion Expand/Collapse
+    const accordionButtons = document.querySelectorAll('.js-toggle-accordion');
+    accordionButtons.forEach(btn => {
+      const controlsId = btn.getAttribute('aria-controls');
+      const content = controlsId ? document.getElementById(controlsId) : btn.nextElementSibling;
+      const icon = btn.querySelector('.accordion-toggle-icon');
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isCurrentlyExpanded = btn.getAttribute('aria-expanded') === 'true';
+        const willExpand = !isCurrentlyExpanded;
+
+        btn.setAttribute('aria-expanded', String(willExpand));
+
+        if (content) {
+          if (willExpand) {
+            content.removeAttribute('hidden');
+            requestAnimationFrame(() => {
+              content.classList.add('is-open');
+            });
+            if (icon) icon.textContent = '−';
+          } else {
+            content.classList.remove('is-open');
+            if (icon) icon.textContent = '+';
+            setTimeout(() => {
+              if (btn.getAttribute('aria-expanded') === 'false') {
+                content.setAttribute('hidden', '');
+              }
+            }, 400);
+          }
+        }
+      });
+    });
+
+    // B. Specialist Photo Galleries
+    const specialistCards = document.querySelectorAll('.specialist-card');
+    specialistCards.forEach(card => {
+      const gallery = card.querySelector('.js-gallery');
+      if (!gallery) return;
+
+      const mainPhoto = card.querySelector('.js-gallery-photo');
+      const prevBtn = card.querySelector('.js-gallery-prev');
+      const nextBtn = card.querySelector('.js-gallery-next');
+      const currentCounter = card.querySelector('.js-current-slide');
+      const thumbs = Array.from(card.querySelectorAll('.js-gallery-thumb'));
+
+      if (!thumbs.length) return;
+
+      let currentIdx = 0;
+
+      const updateSlide = (idx) => {
+        currentIdx = (idx + thumbs.length) % thumbs.length;
+        const activeThumb = thumbs[currentIdx];
+        const newSrc = activeThumb ? activeThumb.getAttribute('data-src') : null;
+
+        if (mainPhoto && newSrc) {
+          mainPhoto.src = newSrc;
+        }
+
+        thumbs.forEach((th, i) => {
+          th.classList.toggle('is-active', i === currentIdx);
+        });
+
+        if (currentCounter) {
+          currentCounter.textContent = String(currentIdx + 1);
+        }
+      };
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateSlide(currentIdx - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateSlide(currentIdx + 1);
+        });
+      }
+
+      thumbs.forEach((thumb, idx) => {
+        thumb.addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateSlide(idx);
+        });
+      });
+    });
+  };
+
+  initTeamPage();
 });
+
